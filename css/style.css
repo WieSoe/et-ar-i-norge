@@ -1,0 +1,220 @@
+/* Et år i Norge – Übungswebseite
+   Minimales Grundgerüst (Phase 0). Wird in Phase 7 (Mobile/Responsive)
+   ausgebaut. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  color: #1a1a1a;
+  background: #fafafa;
+}
+
+#app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 16px 80px;
+}
+
+.aufgabe-text {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.aufgabe-eingabe {
+  font-size: 16px; /* verhindert Auto-Zoom auf iOS */
+  padding: 10px 12px;
+  width: 100%;
+  max-width: 320px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+  min-height: 44px;
+  border: none;
+  border-radius: 6px;
+  background: #1a5fb4;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #9db4cf;
+  cursor: default;
+}
+
+.feedback {
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.feedback:empty {
+  padding: 0;
+  margin-top: 0;
+}
+
+.feedback-richtig {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #a3d9b1;
+}
+
+.feedback-falsch {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #eab6bb;
+}
+
+/* Auswahl-Ansicht */
+
+.themen-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.thema-eintrag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 4px;
+  min-height: 44px;
+}
+
+.thema-eintrag input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.thema-text {
+  flex: 1;
+}
+
+.thema-fortschritt {
+  font-size: 0.85rem;
+  color: #555;
+  white-space: nowrap;
+}
+
+.feld-label {
+  display: block;
+  margin: 12px 0;
+}
+
+.feld-label select {
+  font-size: 16px;
+  padding: 6px 8px;
+  margin-left: 4px;
+}
+
+.hinweis {
+  color: #a1260d;
+  font-weight: 600;
+}
+
+/* Sätze ordnen (satzstellung) */
+
+.chip-liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 44px;
+  margin-bottom: 12px;
+}
+
+.chip-ziel-label {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 8px 0 4px;
+}
+
+.chip-ziel {
+  padding: 8px;
+  border: 1px dashed #999;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.wort-chip {
+  background: #e9ecef;
+  color: #1a1a1a;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 16px;
+  min-height: 44px;
+}
+
+.wort-chip:hover {
+  background: #dde1e5;
+}
+
+/* Ende-Ansicht */
+
+.ergebnis-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.rueckblick-liste {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 12px 0 20px;
+}
+
+.rueckblick-liste li {
+  background: #fff3f3;
+  border: 1px solid #eab6bb;
+  border-radius: 6px;
+  padding: 10px 12px;
+  line-height: 1.4;
+}
+
+.ende-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Mobile/Responsive Feinschliff (siehe SPEC.md Abschnitt 11) */
+
+@media (max-width: 600px) {
+  #app {
+    padding: 16px 12px 80px;
+  }
+
+  .aufgabe-text {
+    font-size: 1.1rem;
+  }
+
+  .aufgabe-eingabe {
+    max-width: 100%;
+  }
+
+  #aufgabe-container > button,
+  #auswahl-view > button {
+    width: 100%;
+  }
+
+  .ende-buttons button {
+    width: auto;
+    flex: 1 1 auto;
+  }
+}

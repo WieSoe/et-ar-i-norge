@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Et år i Norge – Übungen</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<!--
+  Et år i Norge – Übungswebseite (siehe SPEC.md und TASKS.md)
+
+  Öffnen: diese Datei einfach per Doppelklick im Browser öffnen
+  (file://…). Kein Server, keine Installation nötig.
+
+  Neue Übungsaufgaben ergänzen: eine bestehende Datei unter data/
+  öffnen (z. B. data/aufgaben-adjektive.js) und ein weiteres Objekt in
+  das Array einfügen, oder eine neue Datei data/aufgaben-<thema>.js
+  nach demselben Muster anlegen und hier per <script src="…"> vor
+  js/app.js einbinden. Datenschema, Vokabelregel (nur Wörter bis zur
+  jeweiligen Lektion aus vokabeln/) und Beispiele: siehe SPEC.md
+  Abschnitt 5 und 10.
+-->
+
+<body>
+
+<div id="app">
+  <section id="auswahl-view"></section>
+  <section id="uebung-view" hidden></section>
+</div>
+
+<!--
+  Reihenfolge wichtig: Daten und Hilfsfunktionen müssen vor app.js
+  geladen sein, da app.js darauf zugreift.
+-->
+<script src="data/themen.js"></script>
+<script src="data/aufgaben-mye-mange.js"></script>
+<script src="data/aufgaben-infinitiv.js"></script>
+<script src="data/aufgaben-praesens.js"></script>
+<script src="data/aufgaben-modalverben.js"></script>
+<script src="data/aufgaben-adjektive.js"></script>
+<script src="data/aufgaben-inversion.js"></script>
+<script src="data/aufgaben-ikke-stellung.js"></script>
+<script src="data/aufgaben-imperativ.js"></script>
+<script src="data/aufgaben-artikel.js"></script>
+<script src="data/aufgaben-artikel-auslassen.js"></script>
+<script src="data/aufgaben-fragewoerter.js"></script>
+<script src="data/aufgaben-singular-plural.js"></script>
+<script src="data/aufgaben-wortstellung.js"></script>
+<script src="data/aufgaben-zahlen.js"></script>
+<script src="js/check.js"></script>
+<script src="js/progress.js"></script>
+<script src="js/render-luecke.js"></script>
+<script src="js/render-form.js"></script>
+<script src="js/render-satzstellung.js"></script>
+<script src="js/render-zahlen.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
