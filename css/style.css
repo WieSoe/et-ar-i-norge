@@ -193,6 +193,59 @@ button:disabled {
   gap: 10px;
 }
 
+/* Adjektiv-Referenztabelle (erscheint nach jeder Adjektiv-Aufgabe) */
+
+.adjektiv-referenz {
+  margin-top: 20px;
+  padding: 14px 16px;
+  background: #f1f5fb;
+  border: 1px solid #c3d4e8;
+  border-radius: 8px;
+}
+
+.adjektiv-referenz-titel {
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.adjektiv-tabelle {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.adjektiv-tabelle th,
+.adjektiv-tabelle td {
+  border: 1px solid #c3d4e8;
+  padding: 6px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.adjektiv-tabelle th {
+  background: #dde7f3;
+}
+
+.ref-de {
+  display: block;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.adjektiv-ausnahme {
+  margin: 10px 0;
+}
+
+.adjektiv-beispiele {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.adjektiv-beispiele li {
+  margin-bottom: 4px;
+}
+
 /* Mobile/Responsive Feinschliff (siehe SPEC.md Abschnitt 11) */
 
 @media (max-width: 600px) {
@@ -216,5 +269,14 @@ button:disabled {
   .ende-buttons button {
     width: auto;
     flex: 1 1 auto;
+  }
+
+  .adjektiv-tabelle {
+    font-size: 0.8rem;
+  }
+
+  .adjektiv-tabelle th,
+  .adjektiv-tabelle td {
+    padding: 4px 5px;
   }
 }

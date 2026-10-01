@@ -44,6 +44,10 @@ function renderForm(aufgabe, container, onAntwort) {
       feedback.className = "feedback feedback-falsch";
     }
 
+    if (aufgabe.thema === "adjektive" && typeof window.renderAdjektivReferenz === "function") {
+      window.renderAdjektivReferenz(container);
+    }
+
     if (typeof feedback.scrollIntoView === "function") {
       feedback.scrollIntoView({ block: "center", behavior: "smooth" });
     }
